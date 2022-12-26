@@ -6,6 +6,8 @@
   --pressed-state-color: #404bbf;
   --second-btn-color: #f4f4fd;
   --typical-lh: 1.5;
+  --first-gap: 24px;
+  --second-gap: 40px;
 }
 
 p,
@@ -49,11 +51,35 @@ body {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
-  border: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header > .container {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.logo {
+  margin-right: 76px;
+}
+.site-nav > .list {
+  display: flex;
+  gap: var(--second-gap);
+}
+
+.address-list {
+  display: flex;
+  gap: var(--second-gap);
 }
 
 .link {
   text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .logo {
@@ -139,6 +165,17 @@ body {
   margin-bottom: 48px;
 }
 
+.hero > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principles-list {
+  display: flex;
+  gap: var(--first-gap);
+}
+
 .section-title {
   font-family: "Roboto";
   font-weight: 600;
@@ -170,15 +207,34 @@ body {
   padding-bottom: 120px;
 }
 
-.section {
+.works-list {
+  display: flex;
+  padding-bottom: 120px;
+  gap: var(--first-gap);
+}
+
+.team {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.section team {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.team-list {
+  display: flex;
+  gap: var(--first-gap);
 }
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+
+.team-item-text {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+  }
 
 .portfolio .portfolio-title {
   display: none;
@@ -191,6 +247,29 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
+}
+
+.portfolio-fiter-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 96px;
+  margin-bottom: 72px;
+  gap: var(--first-gap);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc (100% / 4 - 20px);
+  margin-top: -48px;
+  margin-left: -24px;
+}
+
+.portfolio-item {
+  border-bottom: 1px solid #e7e9fc;
+  flex-basis: calc (100%/4-20px);
+  margin-top: 48px;
+  margin-left: 24px;
 }
 
 .team {
@@ -218,32 +297,23 @@ body {
   line-height: 1.19;
   letter-spacing: 0.04em;
   text-transform: capitalize;
-  width: 170px;
-  height: 51px;
+  min-width: 169px;
+  height: 56px;
   left: 20px;
   top: 20px;
   color: var(--first-title-color);
   background: #4d5ae5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  width: 170px;
-  height: 51px;
+  min-width: 169px;
+  height: 56px;
   left: 20px;
   top: 88px;
   background: var(--pressed-state-color);
-  border-radius: 4px;
-}
-.hero-btn:active {
-  width: 170px;
-  height: 51px;
-  left: 20px;
-  top: 88px;
-  background: var(--pressed-state-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
