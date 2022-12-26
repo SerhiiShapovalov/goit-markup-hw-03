@@ -44,7 +44,6 @@ body {
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
   margin: 0 auto;
 }
 
@@ -234,7 +233,7 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 32px;
-  }
+}
 
 .portfolio .portfolio-title {
   display: none;
@@ -255,21 +254,6 @@ body {
   padding-top: 96px;
   margin-bottom: 72px;
   gap: var(--first-gap);
-}
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: calc (100% / 4 - 20px);
-  margin-top: -48px;
-  margin-left: -24px;
-}
-
-.portfolio-item {
-  border-bottom: 1px solid #e7e9fc;
-  flex-basis: calc (100%/4-20px);
-  margin-top: 48px;
-  margin-left: 24px;
 }
 
 .team {
@@ -342,4 +326,36 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+
+/* CARD SET */
+.portfolio-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--first-gap));
+  margin-top: calc(-1 * var(--first-gap));
+}
+
+.portfolio-item {
+  border-bottom: 1px solid #e7e9fc;
+  flex-basis: calc (100%/3-var(--first-gap));
+  margin-top: 48px;
+  margin-left: 24px;
+}
+
+/* CARD */
+.card {
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.portfolio-item-subtitle {
+  margin-top: 32px;
 }
