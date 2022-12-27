@@ -126,12 +126,11 @@ body {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-  background: var(--pressed-state-color);
+  color: var(--pressed-state-color);
   border-radius: 2px;
-  color: #434455;
 }
 
-.site-nav .link:active {
+.site-nav .link.current {
   color: var(--pressed-state-color);
   background-color: #ffffff;
 }
